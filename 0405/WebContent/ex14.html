@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table</title>
+<style type="text/css">
+	table,tr,td { border: 1px solid black;}
+</style>
+</head>
+<body>
+	<table style="width: 80%; text-align: center;">
+		<tr>
+			<td>Firstname</td>
+			<td>Lastname</td>
+			<td>Age</td>
+		</tr>
+		<tr>
+			<td>Jill</td>
+			<td>Smith</td>
+			<td>50</td>
+		</tr>
+		<tr>
+			<td>Eve</td>
+			<td>Jackson</td>
+			<td>94</td>
+		</tr>	
+	</table>
+	<hr />
+	<!-- table 구성을 <thead>, <tbody>, <tfoot>로 나눈다. -->
+	<!-- table 구성을 <thead>, <tbody>, <tfoot>로 나누지 않으면 무조건 <tbody> -->
+	<!-- 구성 순서가 달라도 알아서 thead가 처음, tfoot이 마지막을 간다. -->
+	<!-- thead,tfoot은 생략가능 -->	
+	<table style="width: 70%; text-align: center;">
+		<tfoot>
+			<tr>
+				<td colspan="3">병합</td>
+			</tr>
+		</tfoot>	
+		<tbody>	
+			<tr>
+				<td>고길동</td><td>24</td><td>서울시</td>
+			</tr>
+			<tr>
+				<td>둘리</td><td>5</td><td>세종시</td>
+			</tr>
+			<tr>
+				<td>마이콜</td><td>19</td><td>거제시</td>
+			</tr>	
+		</tbody>	
+		<thead>
+			<tr>
+				<td>이름</td><td>나이</td><td>주소</td>
+			</tr>
+		</thead>
+	</table>
+	<hr />
+	
+	<table style="width: 70%; text-align: center;">
+		<tfoot>
+			<tr>
+				<td colspan="3">병합</td>
+			</tr>
+		</tfoot>	
+		<tbody>	
+			<tr>
+				<td>고길동</td><td>24</td><td rowspan="3">서울시</td>
+			</tr>
+			<tr>
+				<td>둘리</td><td>5</td>
+			</tr>
+			<tr>
+				<td>마이콜</td><td>19</td>
+			</tr>	
+		</tbody>	
+		<thead>
+			<tr>
+				<td>이름</td><td>나이</td><td>주소</td>
+			</tr>
+		</thead>
+	</table>
+	<hr />
+	<table style="width: 70%; text-align: center;">
+		<tfoot>
+			<tr>
+				<td colspan="3">병합</td>
+			</tr>
+		</tfoot>	
+		<tbody>	
+			<tr>
+				<td>고길동</td><td rowspan="3" colspan="2">서울시</td>
+			</tr>
+			<tr>
+				<td>둘리</td>
+			</tr>
+			<tr>
+				<td>마이콜</td>
+			</tr>	
+		</tbody>	
+		<thead>
+			<tr>
+				<td>이름</td><td>나이</td><td>주소</td>
+			</tr>
+		</thead>
+	</table>
+	
+	
+</body>
+</html>

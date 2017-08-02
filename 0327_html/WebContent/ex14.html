@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table</title>
+	<style type="text/css">
+		table, th, td { border: 1px solid black;  }
+	</style>
+</head>
+<body>
+	<table style="width: 80% ; text-align: center;" align="center" >
+		<tr>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Age</th>
+		</tr>
+		<tr>
+			<td>Jill</td>
+			<td>Smith</td>
+			<td>50</td>
+		</tr>
+		<tr>
+			<td>Eve</td>
+			<td>Jackson</td>
+			<td>94</td>
+		</tr>
+	</table>
+	<hr />
+   <!-- table 구성을 <thead>, <tbody> , <tfoot>로 나눈다. -->	
+   <!-- table 구성을 <thead>, <tbody> , <tfoot>로 나누지 않으면 무조건  tbody -->
+   <!-- 구성 순서가 달라도 알아서 thead가 처음, tfoot이 마지막을 간다.  -->
+   <!-- thead 와 tfoot은 생략가능 -->
+   <table style="width: 70%; text-align: center;" >
+   		<!-- 셀 병합 : 열병합 : "colspan="셀의 수" -->
+   		<!-- 셀 병합 : 행병합 : "rowspan="셀의 수" -->
+   		<tfoot>
+   			<tr>
+   				<td colspan="3">병합</td>
+   			</tr>
+   		</tfoot>
+   		<tbody>
+   			<tr>
+   				<td>고길동</td> <td>24</td> <td>서울시</td>
+   			</tr>
+   			<tr>	
+   				<td>둘리</td> <td>5</td> <td>서울시</td>
+   			</tr>
+   			<tr>	
+   				<td>마이콜</td> <td>19</td> <td>서울시</td>
+   			</tr>
+   		</tbody>
+   		<thead>
+   			<tr>
+   				<th>이름</th><th>나이</th><th>주소</th>
+   			</tr>
+   		</thead>
+   </table>	
+   <hr />
+     <table style="width: 70%; text-align: center;" >
+   		<thead>
+   			<tr>
+   				<th>이름</th><th>나이</th><th>주소</th>
+   			</tr>
+   		</thead>
+   		<tbody>
+   			<tr>
+   				<td>고길동</td> <td>24</td> <td rowspan="4">서울시</td>
+   			</tr>
+   			<tr>	
+   				<td>둘리</td> <td>5</td> 
+   			</tr>
+   			<tr>	
+   				<td>마이콜</td> <td>19</td> 
+   			</tr>
+   			<tr>	
+   				<td>희동이</td> <td>5</td> 
+   			</tr>
+   		</tbody>
+   		
+   </table>	
+   <hr />
+     <table style="width: 70%; text-align: center;" >
+   		<thead>
+   			<tr>
+   				<th>이름</th><th>나이</th><th>주소</th>
+   			</tr>
+   		</thead>
+   		<tbody>
+   			<tr>
+   				<td>고길동</td> <td>24</td> <td>서울시</td>
+   			</tr>
+   			<tr>	
+   				<td colspan="2" rowspan="2">둘리</td> <td>서울시</td>
+   			</tr>
+   			<tr>	
+   				 <td>서울시</td>
+   			</tr>
+   			<tr>	
+   				<td>희동이</td> <td>5</td> <td>서울시</td>
+   			</tr>
+   		</tbody>
+   </table>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

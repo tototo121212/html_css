@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button onclick="getLocation()">눌러주세요</button>
+	<p id="my"></p>
+	<div id="map"></div>
+	<script type="text/javascript">
+		var x = document.getElementById("my");
+		function getLocation() {
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(showPosition);
+			}else{
+				x.innerHTML ="브라우저가 맵을 지원하지 않습니다."
+			}
+		}
+		function showPosition(position) {
+		   var latlon =	position.coords.latitude +","+ position.coords.longitude;
+		   var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+			    +latlon+"&zoom=14&size=400x300&sensor=false";
+		   document.getElementById("map").innerHTML="<img src='"+img_url+"' />";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button onclick="getLocation()">눌러주세요</button>
+	<p id="my"></p>
+	<script type="text/javascript">
+		var x = document.getElementById("my");
+		function getLocation() {
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(showPosition);
+			}else{
+				x.innerHTML ="브라우저가 맵을 지원하지 않습니다."
+			}
+		}
+		function showPosition(position) {
+			x.innerHTML = "위도 : " + position.coords.latitude +
+			"<br />경도 : " + position.coords.longitude;
+		}
+	</script>
+</body>
+</html>
